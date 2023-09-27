@@ -47,7 +47,12 @@ export default function App() {
           <Stack.Screen
             name="SignUp"
             component={SignUpScreen}
-            options={{ headerShown: false }}
+            options={{
+              headerShown: false,
+              contentStyle: {
+                backgroundColor: themeColors.bg,
+              },
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>
