@@ -37,7 +37,12 @@ export default function App() {
           <Stack.Screen
             name="Login"
             component={LoginScreen}
-            options={{ headerShown: false }}
+            options={{
+              headerShown: false,
+              contentStyle: {
+                backgroundColor: themeColors.bg,
+              },
+            }}
           />
           <Stack.Screen
             name="SignUp"
