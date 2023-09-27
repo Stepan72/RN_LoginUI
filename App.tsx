@@ -9,19 +9,25 @@ import {
   SignUpScreen,
   WelcomeScreen,
 } from "./screens";
+import { themeColors } from "./theme";
 
 const Stack = createNativeStackNavigator<StackParamList>();
 
 export default function App() {
   return (
     <>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Welcome">
           <Stack.Screen
             name="Welcome"
             component={WelcomeScreen}
-            options={{ headerShown: false }}
+            options={{
+              headerShown: false,
+              contentStyle: {
+                backgroundColor: themeColors.bg,
+              },
+            }}
           />
           <Stack.Screen
             name="Home"
